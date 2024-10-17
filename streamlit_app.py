@@ -1,3 +1,8 @@
+try:
+    import openpyxl
+except ImportError:
+    import subprocess
+    subprocess.check_call(["pip", "install", "openpyxl"])
 import streamlit as st
 import pandas as pd
 from ics import Calendar, Event
